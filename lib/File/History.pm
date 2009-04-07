@@ -8,7 +8,7 @@ use Carp;
 use base qw(Class::Accessor::Fast);
 __PACKAGE__->mk_accessors($_) for qw(history buf pointer filename);
 
-our $VERSION = '0.00001';
+our $VERSION = '0.00002';
 
 sub new {
     my $class = shift;
@@ -110,7 +110,7 @@ File::History is simpel history file maker
 
 =head2 find_history();
 
-  It takes it out line by line.
+  This method picks up a record from input history.
 
 =head2 add_history($cmd);
 
@@ -118,8 +118,8 @@ File::History is simpel history file maker
 
 =head2 flush();
 
-  This method writes file the history that it writes it.
-  It is time when timing in which this method is called ends the terminal.
+  This method writes file the input history.
+  When you finish a terminal, this method is called.
 
 =head1 AUTHOR
 
